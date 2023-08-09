@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio Sesión</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,300;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="login_frame" class="main_frame">
+        <form id="login_form">
+            <h3 class="label">Inicio de Sesión</h3>
+            <label for="user_name">Usuario</label>
+            <select id="user_name">
+                <option>Seleccione su usuario</option>
+            </select>
+
+            <span class="hide" id="error_no_user">Seleccione un usuario</span>
+
+            <label for="form_password">Contraseña</label>
+            <input type="password" name="form_password" id="form_password" placeholder="Contraseña">
+
+            <span class="hide" id="error_no_password">Digite su contraseña</span>
+            <span class="hide" id="error_wrong_password">Contraseña inválida</span>
+
+            <input type="submit" name="form_submit" id="form_submit" value="Ingresar">
+        </form>
+
+    </div>
+    
+    <div id="welcome_user_frame" class="hide user_frame">
+        <h4 id="welcome_message">Bienvenido/a</h4>
+        <h2 id="welcome_user"></h2>
+        <div class="lds-dual-ring"></div>
+    </div>
+
+    <script type="module" src="/cajero.js"></script>
+    <script type="module" src="/homepage.js"></script>
+</body>
+</html>
