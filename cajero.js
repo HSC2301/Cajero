@@ -1,31 +1,4 @@
-const usersDB = [
-    {
-        user: 'Jorge',
-        pass: '123',
-        balance: 550
-    },
-    {
-        user: 'Jaime',
-        pass: '234',
-        balance: 250
-    },
-    {
-        user: 'Erik',
-        pass: '345',
-        balance: 350
-    },
-    {
-        user: 'Nadia',
-        pass: '456',
-        balance: 400
-    },
-    {
-        user: 'Miguel',
-        pass: '567',
-        balance: 600
-    }
-]
-
+import usersDB from "./userDB.js";
 //Create user selection dropdown
 let select_user = document.getElementById("user_name");
 
@@ -75,6 +48,7 @@ function validate(username, password){
             },2500);
             setTimeout(()=> {
                 window.open("/home.html","_self");
+                window.onload = document.getElementById('active_user').innerHTML=username;
             }, 3000);
         }
     }
