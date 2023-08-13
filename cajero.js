@@ -22,7 +22,7 @@ login_form.addEventListener('submit', (event)=>{
     username = document.getElementById('user_name').value;
     let password = document.getElementById('form_password').value;
     //console.log(username, password);
-    validate(username, password)
+    validate(username, password);
 })
 
 //Validate login information with DB
@@ -43,12 +43,12 @@ function validate(username, password){
             document.getElementById('login_frame').classList.add('hide');
             document.getElementById('welcome_user_frame').classList.remove('hide');
             document.getElementById('welcome_user_frame').classList.add('frame');
+            document.cookie = `username=${username}`;
             setTimeout(()=> {
                 document.getElementById('welcome_user_frame').classList.add('hidden_transition');
             },2500);
             setTimeout(()=> {
                 window.open("/home.html","_self");
-                window.onload = document.getElementById('active_user').innerHTML=username;
             }, 3000);
         }
     }

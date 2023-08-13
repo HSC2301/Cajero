@@ -27,3 +27,12 @@ let usersDB = [
 ]
 
 export default usersDB;
+
+/*usersDB = {
+    jorge: {
+        pass: '',
+        balance: 550,
+    },
+}
+
+usersDB = {... usersDB, }*/

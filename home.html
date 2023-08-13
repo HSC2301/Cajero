@@ -16,9 +16,18 @@
 <body>
 
     <div id="home_frame" class="frame">
-        <p>Hola</p>
-        <p id="active_user"></p>
+        <div id="welcome_banner">
+            <p>Hola</p>
+            <p id="active_user"></p>
+        </div>
         <p>Tu saldo en la cuenta es de: </p>
+        <p id="total_balance"></p>
+        <div id="user_operations">
+            <button id="add_money">Depositar dinero</button>
+            <button id="remove_money">Retirar dinero</button>
+        </div>
+        <input type="number" id="quantity" name="quantity" min="1" max="990" class="hide">
+        <button id="confirm_amount" class="hide">Aceptar</button>
 
 
     </div>
